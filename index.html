@@ -30,13 +30,11 @@
                 $("#result").html("<div class='text-center'>Analyzing...</div>");
                 
                
-                    $.ajax({
-                    url: "https://ai-code-reviewer-be.onrender.com/analyze",  // Update Render API URL
-                    type: "POST",
+                   $.ajax({
+    url: "https://ai-code-reviewer.onrender.com/analyze",  // Updated API URL
+    type: "POST",
+});
 
-                    
-                    contentType: "application/json",
-                    data: JSON.stringify({ code: code }),
                     success: function(response) {
                         let output = `<h5>Analysis Result:</h5>
                             <pre><strong>Syntax:</strong> ${response.analysis.syntax}</pre>
