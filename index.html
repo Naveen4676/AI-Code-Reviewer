@@ -29,9 +29,12 @@
 
                 $("#result").html("<div class='text-center'>Analyzing...</div>");
                 
-                $.ajax({
-                    url: "http://127.0.0.1:8000/analyze",
+               
+                    $.ajax({
+                    url: "https://your-render-backend-url.onrender.com/analyze",  // Update Render API URL
                     type: "POST",
+
+                    
                     contentType: "application/json",
                     data: JSON.stringify({ code: code }),
                     success: function(response) {
